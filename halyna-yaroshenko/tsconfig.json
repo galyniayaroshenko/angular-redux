@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "./aot",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "lib": ["es2015", "dom"],
+    "baseUrl": "./src",
+
+    "paths": {
+      "@angular/*": ["node_modules/@angular/*"]
+    },
+
+    "typeRoots": [
+      "node_modules/@types/"
+    ],
+
+    "types": [
+      "jasmine",
+      "node"
+    ]
+  },
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  },
+
+  "angularCompilerOptions": {
+    "genDir": "./aot",
+    "skipMetadataEmit": true
+  }
+}

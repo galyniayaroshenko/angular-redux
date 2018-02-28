@@ -1,0 +1,13 @@
+<h3>News: </h3>
+
+<div *ngIf="loading | async">Loading...</div>
+
+<app-news
+  *ngFor="let item of news | async; trackBy:getKey"
+  [newsType]=newsType
+  [key]=getKey(item)>
+</app-news>
+
+<div *ngIf="error | async">
+  Error: {{ error | async | json }}
+</div>
