@@ -7,8 +7,11 @@ import { NewsComponent } from './components/news';
 import { CounterComponent } from './components/counter';
 
 import { NewsService } from './services/news';
+
 import { NewsListActions } from './store/actions/news-list';
+
 import { NewsListEpics } from './store/epics/news-list';
+import { RootNewsEpics } from './store/epics';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,11 @@ import { NewsListEpics } from './store/epics/news-list';
   ],
   providers: [
     NewsService,
+
     NewsListActions,
-    NewsListEpics
+
+    NewsListEpics,
+    RootNewsEpics
   ]
 })
 

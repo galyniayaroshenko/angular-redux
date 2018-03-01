@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { NEWS_LIST_TYPES } from '../modules/news/models/news-list';
-import { NewsListEpics } from '../modules/news/store/epics/news-list';
+import { NEWS_LIST_TYPES } from '../../models/news-list';
+import { NewsListEpics } from './news-list';
 
 @Injectable()
-export class RootEpics {
+export class RootNewsEpics {
   constructor(private newsListEpics: NewsListEpics) {}
 
   public createEpics() {

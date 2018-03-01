@@ -8,7 +8,7 @@ import { Epic, createEpicMiddleware } from 'redux-observable';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs/observable/of';
 
-import { IAppState } from '../../../../../store/reducers';
+import { IAppState } from '../../../../../store/reducers/app';
 import { LOAD_NEWS_LIST } from '../../actions/news-list/constants';
 import { NewsListAction, NewsListActions } from '../../actions/news-list';
 import { NewsListType } from '../../../models/news-list';
@@ -49,7 +49,6 @@ export class NewsListEpics {
   }
 
   private newsListNotAlreadyFetched(newsListType: NewsListType, state: IAppState): boolean {
-    console.log('state', state); // tslint:disable-line
     return !(state[newsListType] && state[newsListType].items && Object.keys(state[newsListType].items).length);
   }
 }

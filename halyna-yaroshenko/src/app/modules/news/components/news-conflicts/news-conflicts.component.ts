@@ -22,13 +22,13 @@ const sortNews = (newsDictionary$: Observable<{}>) =>
 })
 
 export class NewsConflictsComponent {
-  @select$(['conflicts', 'items'], sortNews)
+  @select$(['news', 'conflicts', 'items'], sortNews)
   readonly news$: Observable<INews[]>;
 
-  @select(['conflicts', 'loading'])
+  @select(['news', 'conflicts', 'loading'])
   readonly loading$: Observable<boolean>;
 
-  @select(['conflicts', 'error'])
+  @select(['news', 'conflicts', 'error'])
   readonly error$: Observable<any>;
 
   constructor(

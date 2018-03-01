@@ -31,6 +31,6 @@ export class NewsComponent {
   @dispatch() removeLike = () => ({ type: REMOVE_LIKE });
 
   getBasePath() {
-    return (this.key >= 0) ? [this.newsType, 'items', this.key] : null;
+    return (this.key >= 0) ? ['news', this.newsType, 'items', this.key] : null;
   }
 }
